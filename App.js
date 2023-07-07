@@ -5,7 +5,8 @@ import { StatusBar } from "expo-status-bar";
 import { useRef, useState } from "react";
 import { Platform, StyleSheet, View } from "react-native";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
-import { captureRef } from 'react-native-view-shot';
+import { captureRef } from "react-native-view-shot";
+// import * as SplashScreen from "expo-splash-screen";
 
 import Button from "./components/Button";
 import CircleButton from "./components/CircleButton";
@@ -89,6 +90,10 @@ export default function App() {
       alert("You did not select any image.");
     }
   };
+
+  // tirando o splashScreen por conta da demora de loading
+  // SplashScreen.preventAutoHideAsync();
+  // setTimeout(SplashScreen.hideAsync, 10000);
 
   return (
     <GestureHandlerRootView style={styles.container}>
